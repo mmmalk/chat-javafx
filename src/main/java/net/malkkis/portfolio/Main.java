@@ -1,8 +1,14 @@
 package net.malkkis.portfolio;
 
 import javafx.application.Application;
+import javafx.application.HostServices;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -22,6 +28,25 @@ public class Main extends Application {
 
         logger.log(Level.INFO, "Application is starting");
 
-    }
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("start.fxml"));
 
+            //Just load the scene, set the stage and go
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            //put HostServices in properties
+            stage.getProperties().put("hostServices", this.getHostServices());
+            stage.setTitle("Chat-JavaFX");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch(Exception e){
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            logger.log(Level.SEVERE, sw.toString());
+        }
+
+
+    }
 }

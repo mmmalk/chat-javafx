@@ -3,17 +3,16 @@ package net.malkkis.portfolio;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 
 /**
  * Simple configuration window for client
@@ -55,6 +54,8 @@ public class ConfigurationWindow extends AnchorPane {
      */
     private EventHandler<ActionEvent> buttonHandler = actionEvent -> {
         //Pass textfield string values to client state
+        Main.setClientConfig(userName.getText(), serverAddr.getText());
+        //close this window
         Stage stage = (Stage) okButton.getScene().getWindow();
         stage.close();
     };

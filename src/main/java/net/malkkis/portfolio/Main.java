@@ -16,9 +16,24 @@ import java.util.logging.Logger;
 
 public class Main extends Application {
 
+    private static String userName;
+    private static String address;
+
     public static void main(String[] args){
         Application.launch(Main.class);
     }
+
+    public static void setClientConfig(String name, String addr) {
+        userName = name;
+        address = addr;
+    }
+
+    public static String[] getClientConfig(){
+        String[] r = {userName, address};
+        return r;
+    }
+
+
 
     @Override
     public void start(Stage stage) throws Exception {

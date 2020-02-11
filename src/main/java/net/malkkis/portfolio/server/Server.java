@@ -94,6 +94,9 @@ public class Server {
         }
     }
 
+    /**
+     * Simple handler class to take care of client connections
+     */
     private class Handler implements Runnable {
 
         private final Socket socket;
@@ -111,7 +114,9 @@ public class Server {
             ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream())){
                 Scanner in = new Scanner(is);
                 while(true){
-                    //unpack the payload here
+                    //if we don't know this client from beforehand
+                    //add it to list of known clients
+                    //broadcast the payload here (not the original sender, though)
                 }
 
             } catch(Exception e){

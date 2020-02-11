@@ -4,6 +4,7 @@ package net.malkkis.portfolio;
 import javafx.application.HostServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -52,4 +53,14 @@ public class StartWindow {
         return stage;
     }
 
+    @FXML
+    private void showConfigWindow(MouseEvent mouseEvent) {
+
+        Stage configStage = new Stage();
+        configStage.setTitle("Configuration");
+        Scene configScene = new Scene(new ConfigurationWindow());
+        configStage.setScene(configScene);
+        configStage.show();
+
+    }
 }

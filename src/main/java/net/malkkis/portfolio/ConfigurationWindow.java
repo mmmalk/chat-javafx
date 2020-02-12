@@ -30,6 +30,7 @@ public class ConfigurationWindow extends AnchorPane {
     private TextField serverAddr = new TextField("server address");
     private Button okButton = new Button("Ok");
 
+
     public ConfigurationWindow() {
         okButton.setOnAction(buttonHandler);
 
@@ -50,7 +51,7 @@ public class ConfigurationWindow extends AnchorPane {
     }
 
     /**
-     * Eventhandler for OK button, passes settings to main chat application
+     * EventHandler for OK button, passes settings to main chat application
      */
     private EventHandler<ActionEvent> buttonHandler = actionEvent -> {
         //Pass textfield string values to client state
@@ -59,6 +60,5 @@ public class ConfigurationWindow extends AnchorPane {
         Stage stage = (Stage) okButton.getScene().getWindow();
         stage.close();
     };
-
 
 }

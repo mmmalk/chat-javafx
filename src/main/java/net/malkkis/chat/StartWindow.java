@@ -1,4 +1,4 @@
-package net.malkkis.portfolio;
+package net.malkkis.chat;
 
 
 import javafx.application.HostServices;

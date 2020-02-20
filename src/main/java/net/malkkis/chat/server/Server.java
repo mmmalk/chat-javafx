@@ -1,6 +1,4 @@
-package net.malkkis.portfolio.server;
-
-import net.malkkis.portfolio.Message;
+package net.malkkis.chat.server;
 
 import java.io.*;
 import java.net.ServerSocket;

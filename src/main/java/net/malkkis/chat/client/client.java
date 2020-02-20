@@ -1,8 +1,8 @@
-package net.malkkis.portfolio.client;
+package net.malkkis.chat.client;
 
 import javafx.collections.ObservableList;
-import net.malkkis.portfolio.Main;
-import net.malkkis.portfolio.Message;
+import net.malkkis.chat.Main;
+import net.malkkis.chat.Message;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

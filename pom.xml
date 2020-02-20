@@ -63,7 +63,7 @@
     <!-- HINT: More configuration here! -->
     <properties>
         <!-- Configures this project to use 'net.malkkis.portfolio.Main' as its main class -->
-        <project.mainclass>net.malkkis.portfolio.Main</project.mainclass>
+        <project.mainclass>net.malkkis.chat.Main</project.mainclass>
         
         
         <!-- Don't touch these unless you know what you're doing!

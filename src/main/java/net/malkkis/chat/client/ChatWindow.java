@@ -1,8 +1,8 @@
-package net.malkkis.portfolio.client;
+package net.malkkis.chat.client;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import net.malkkis.portfolio.Message;
+import net.malkkis.chat.Message;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;

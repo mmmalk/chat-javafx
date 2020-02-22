@@ -11,8 +11,9 @@ import java.util.concurrent.Executors;
 
 /**
  * Simple implementation of a server for Chat-JavaFX
+ * TODO implement logging
  * @author Mikko Malkavaara
- * @since 2020.2.10
+ * @since 2020.2.10.
  */
 
 public class Server {
@@ -63,6 +64,7 @@ public class Server {
             try{
                 oos.writeObject(o);
             } catch(Exception e){
+                //TODO raise new dialogue + log the error
 
             }
         });
@@ -86,6 +88,8 @@ public class Server {
                 try {
                     out.writeObject(o);
                 } catch (Exception e) {
+                    //TODO raise new dialogue
+                    //TODO log the error
 
                 }
             }
@@ -98,7 +102,6 @@ public class Server {
     private class Handler implements Runnable {
 
         private final Socket socket;
-        private PrintWriter out;
 
 
         public Handler(final Socket socket){
@@ -111,13 +114,16 @@ public class Server {
             try(ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
             ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream())){
                 Scanner in = new Scanner(is);
-                while(true){
+                while(true){//TODO Implement actual loop in place of this
                     //if we don't know this client from beforehand
                     //add it to list of known clients
                     //broadcast the payload here (not the original sender, though)
+                    break;
                 }
 
             } catch(Exception e){
+                //TODO raise new error dialogue
+                //TODO log the error
 
             }
 
